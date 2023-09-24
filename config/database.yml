@@ -29,3 +29,12 @@ cucumber:
 
 cucumber:
   <<: *test
+
+cucumber:
+  <<: *test
+
+cucumber:
+  <<: *test
+
+cucumber:
+  <<: *test

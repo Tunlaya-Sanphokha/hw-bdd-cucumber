@@ -45,6 +45,10 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
+  def movie_params
+    params.require(:movie).permit(:title, :rating, :description, :release_date)
+  end
+
   private
 
   def force_index_redirect
