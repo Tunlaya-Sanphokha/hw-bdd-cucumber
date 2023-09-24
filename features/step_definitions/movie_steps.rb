@@ -38,12 +38,17 @@ end
 # Part 2, Step 3
 Then /^I should (not )?see the following movies: (.*)$/ do |no, movie_list|
   # Take a look at web_steps.rb Then /^(?:|I )should see "([^"]*)"$/
-  
+  movies = movie_list.split(', ')
+  movies.each do |movie|
+    steps %Q{ When I should #{no }see "#{movie}"}
+  end
 end
 
 Then /I should see all the movies/ do
   # Make sure that all the movies in the app are visible in the table
-
+  Movie.all.each do |movie|
+    steps %Q{ When I should see "#{movie.title}"}
+  end
 end
 
 ### Utility Steps Just for this assignment.
