@@ -8,6 +8,10 @@ gem 'sass-rails', '~> 5.0.3'
 gem 'uglifier', '>= 2.7.1'
 
 gem 'jquery-rails'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection", "~> 1.0"
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -20,7 +24,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'cucumber-rails', require: false
   gem 'rspec-rails'
-
+  
+  gem 'dotenv-rails'
   gem 'pry'
   gem 'pry-byebug'
 
